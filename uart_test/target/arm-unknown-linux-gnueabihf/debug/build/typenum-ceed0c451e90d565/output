@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/dylan/Documents/rustprojects/kubos_projects/test_code/uart_test/target/arm-unknown-linux-gnueabihf/debug/build/typenum-ceed0c451e90d565/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/dylan/Documents/rustprojects/kubos_projects/test_code/uart_test/target/arm-unknown-linux-gnueabihf/debug/build/typenum-ceed0c451e90d565/out/op.rs
