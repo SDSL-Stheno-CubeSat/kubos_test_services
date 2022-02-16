@@ -1,0 +1,11 @@
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/uart_test/target/arm-unknown-linux-gnueabihf/debug/deps/httparse-5060fea9acddee21.rmeta: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/fallback.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/uart_test/target/arm-unknown-linux-gnueabihf/debug/deps/libhttparse-5060fea9acddee21.rlib: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/fallback.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/uart_test/target/arm-unknown-linux-gnueabihf/debug/deps/httparse-5060fea9acddee21.d: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/fallback.rs
+
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/fallback.rs:
