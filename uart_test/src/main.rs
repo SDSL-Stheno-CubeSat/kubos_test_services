@@ -46,6 +46,7 @@ pub fn serial_init(bus: &str) -> ServiceResult<Arc<Mutex<RefCell<serial::SystemP
 // The read function that the comms service read thread will call to wait for messages from the
 // "radio"
 // Returns once a message has been received
+// FOR BEAGLEBOARD bc of max_read size
 const MAX_READ: usize = 48;
 pub fn read(conn: &Arc<Mutex<RefCell<serial::SystemPort>>>) -> ServiceResult<Vec<u8>> {
     loop {
@@ -67,13 +68,14 @@ pub fn read(conn: &Arc<Mutex<RefCell<serial::SystemPort>>>) -> ServiceResult<Vec
             loop {
                 let mut buffer: Vec<u8> = vec![0; MAX_READ];
                 match conn.read(buffer.as_mut_slice()) {
+                //match conn.read_to_end(&mut buffer) {
                     Ok(num) => {
                         buffer.resize(num, 0);
                         packet.append(&mut buffer);
 
-                        println!("Read {} bytes from radio", packet.len());
+                        //println!("Read {} bytes from radio", packet.len());
 
-                        if num < MAX_READ {
+                        if num == 0 {
                             return Ok(packet);
                         }
                     }
@@ -168,6 +170,8 @@ fn main() -> ServiceResult<()> {
 
     thread::sleep(Duration::from_millis(3000));
 
+    
+
     loop {
         let num = read(&conn)?;
         let s = String::from_utf8_lossy(&num);
@@ -176,8 +180,6 @@ fn main() -> ServiceResult<()> {
         let msg = String::from("Hello back");
         let enmsg = msg.as_bytes();
         let _wr = write(&conn, &enmsg);
-
-        thread::sleep(Duration::from_millis(1000));
     }
 
 }
