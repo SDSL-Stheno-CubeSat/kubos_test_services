@@ -14,26 +14,23 @@
 
 import serial
 import time
+import random
 
 bbb = serial.Serial('/dev/ttyUSB0', baudrate=115200, timeout=.1)
 time.sleep(3)
 
-loopnum = 0
+print('Connected to board!')
 
-bbb.write(bytes("hello!", 'utf-8'))
-print("done!")
-
+timer = time.time()
 
 while True:
 
     data = bbb.readlines()
 
-    if loopnum % 5 == 0:
-        bbb.write(bytes(str(data), 'utf-8'))
-    else:
-        bbb.write(bytes("hello world\n", 'utf-8'))      
-
-    loopnum += 1
-
-    time.sleep(1)
+    if data:
+        print(data)
     
+    if time.time() - timer >= 5:
+        bbb.write(bytes('led', 'utf-8'))
+        print("sent led")
+        timer = time.time()
