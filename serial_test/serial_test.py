@@ -25,12 +25,12 @@ timer = time.time()
 
 while True:
 
-    data = bbb.readlines()
+    data = bbb.readline()
 
     if data:
         print(data)
-    
-    if time.time() - timer >= 5:
-        bbb.write(bytes('led', 'utf-8'))
-        print("sent led")
-        timer = time.time()
+
+    if data.decode("utf-8") == "led":
+        print("ledflelfdsl")
+        time.sleep(1)
+        bbb.write(bytes("led complete - python", "utf-8"))

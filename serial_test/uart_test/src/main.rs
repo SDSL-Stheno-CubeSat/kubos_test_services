@@ -12,7 +12,7 @@ use std::cell::RefCell;
 use std::io::prelude::*;
 use std::sync::{Arc, Mutex};
 use std::thread;
-use std::time::Duration;
+use std::time::{Duration, SystemTime};
 
 const BUS: &str = "/dev/ttyS1";
 //const BUS: &str = "/dev/ttyACM0";
@@ -64,6 +64,7 @@ pub fn read(conn: &Arc<Mutex<RefCell<serial::SystemPort>>>) -> ServiceResult<Vec
 
             // Loop until either a full message has been received or a non-timeout error has occured
             let mut packet = vec![];
+            let mut totalbytes = 0;
             loop {
                 let mut buffer: Vec<u8> = vec![0; MAX_READ];
                 match conn.read(buffer.as_mut_slice()) {
@@ -71,9 +72,9 @@ pub fn read(conn: &Arc<Mutex<RefCell<serial::SystemPort>>>) -> ServiceResult<Vec
                         buffer.resize(num, 0);
                         packet.append(&mut buffer);
 
-                        //println!("Read {} bytes from radio", packet.len());
+                        totalbytes += num;
 
-                        if num == 0 {
+                        if num == 0 || totalbytes >= MAX_READ {
                             return Ok(packet);
                         }
                     }
@@ -127,20 +128,27 @@ fn main() -> ServiceResult<()> {
 
     thread::sleep(Duration::from_millis(3000));
 
+    let mut timer = SystemTime::now();
+
     loop {
         let num = read(&conn)?;
         let s = String::from_utf8_lossy(&num);
-        println!("{}", s);
-        if s.len() > 0 {
-            if s.eq("led") {
-                println!("turn on LED");
-                thread::sleep(Duration::from_millis(1000));
+        if s.chars().count() > 0 {
+            println!("{}", s);
+        }
 
-                let msg = String::from("Operation Complete - Rust");
-                let enmsg = msg.as_bytes();
-                let _wr = write(&conn, &enmsg);
-
-                println!("Message Sent!");
+        match timer.elapsed() {
+            Ok(elapsed) => {
+                if elapsed.as_secs() >= 5 {
+                    let msg = String::from("led");
+                    let enmsg = msg.as_bytes();
+                    let _wr = write(&conn, &enmsg);
+                    
+                    timer = SystemTime::now();
+                }
+            }
+            Err(e) => {
+                println!("Error: {:?}", e);
             }
         }
     }
