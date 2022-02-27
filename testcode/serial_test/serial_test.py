@@ -31,6 +31,5 @@ while True:
         print(data)
 
     if data.decode("utf-8") == "led":
-        print("ledflelfdsl")
         time.sleep(1)
         bbb.write(bytes("led complete - python", "utf-8"))

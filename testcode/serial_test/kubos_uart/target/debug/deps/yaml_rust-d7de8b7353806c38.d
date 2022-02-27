@@ -1,0 +1,11 @@
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/debug/deps/yaml_rust-d7de8b7353806c38.rmeta: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/emitter.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/parser.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/scanner.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/yaml.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/debug/deps/libyaml_rust-d7de8b7353806c38.rlib: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/emitter.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/parser.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/scanner.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/yaml.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/debug/deps/yaml_rust-d7de8b7353806c38.d: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/emitter.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/parser.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/scanner.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/yaml.rs
+
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/lib.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/emitter.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/parser.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/scanner.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/yaml-rust-0.4.5/src/yaml.rs:

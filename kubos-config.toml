@@ -1,0 +1,47 @@
+[app-service.addr]
+ip = "0.0.0.0"
+port = 8000
+
+[app-service]
+registry-dir = "/home/system/kubos/apps"
+
+[file-transfer-service.addr]
+ip = "0.0.0.0"
+port = 8040
+
+[file-transfer-service]
+storage_dir = "/home/system/file-storage"
+timeout = 2
+chunk_size = 1024
+hold_count = 5
+downlink_ip = "0.0.0.0"
+downlink_port = 8080
+
+[monitor-service.addr]
+ip = "0.0.0.0"
+port = 8030
+
+[scheduler-service.addr]
+ip = "0.0.0.0"
+port = 8010
+
+[scheduler-service]
+schedules_dir = "/home/system/kubos/schedules"
+
+[shell-service.addr]
+ip = "0.0.0.0"
+port = 8050
+
+[telemetry-service.addr]
+ip = "0.0.0.0"
+port = 8020
+
+[telemetry-service]
+database = "/home/system/kubos/telemetry.db"
+direct_port = 8021
+
+[serial-service]
+bus = "/dev/ttyS1"
+[serial-service.addr]
+port = 8100
+ip = "127.0.0.1"

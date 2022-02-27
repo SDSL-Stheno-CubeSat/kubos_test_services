@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kuart_test/target/debug/build/typenum-e8acf6f6539df927/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kuart_test/target/debug/build/typenum-e8acf6f6539df927/out/op.rs

@@ -1,0 +1,11 @@
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/serial_service/target/arm-unknown-linux-gnueabihf/debug/deps/crc32fast-189188205f1d55b4.rmeta: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/baseline.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/combine.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/specialized/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/table.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/serial_service/target/arm-unknown-linux-gnueabihf/debug/deps/libcrc32fast-189188205f1d55b4.rlib: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/baseline.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/combine.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/specialized/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/table.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/serial_service/target/arm-unknown-linux-gnueabihf/debug/deps/crc32fast-189188205f1d55b4.d: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/baseline.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/combine.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/specialized/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/table.rs
+
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/lib.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/baseline.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/combine.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/specialized/mod.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/crc32fast-1.3.2/src/table.rs:

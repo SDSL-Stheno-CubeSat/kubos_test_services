@@ -1,0 +1,11 @@
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/debug/deps/multipart-fbb6fe61ab7ab1e9.rmeta: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/boundary.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/field.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/save.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/debug/deps/libmultipart-fbb6fe61ab7ab1e9.rlib: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/boundary.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/field.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/save.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/debug/deps/multipart-fbb6fe61ab7ab1e9.d: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/mod.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/boundary.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/field.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/save.rs
+
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/lib.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/mod.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/boundary.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/field.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/multipart-0.16.1/src/server/save.rs:

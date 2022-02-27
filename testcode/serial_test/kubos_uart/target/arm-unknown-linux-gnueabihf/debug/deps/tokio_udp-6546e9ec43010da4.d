@@ -1,0 +1,11 @@
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/arm-unknown-linux-gnueabihf/debug/deps/tokio_udp-6546e9ec43010da4.rmeta: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/frame.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/recv_dgram.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/send_dgram.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/socket.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/arm-unknown-linux-gnueabihf/debug/deps/libtokio_udp-6546e9ec43010da4.rlib: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/frame.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/recv_dgram.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/send_dgram.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/socket.rs
+
+/home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/testcode/serial_test/kubos_uart/target/arm-unknown-linux-gnueabihf/debug/deps/tokio_udp-6546e9ec43010da4.d: /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/lib.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/frame.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/recv_dgram.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/send_dgram.rs /home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/socket.rs
+
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/lib.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/frame.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/recv_dgram.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/send_dgram.rs:
+/home/dylan/.cargo/registry/src/github.com-1ecc6299db9ec823/tokio-udp-0.1.6/src/socket.rs:
