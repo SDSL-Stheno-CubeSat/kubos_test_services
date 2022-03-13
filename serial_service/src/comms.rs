@@ -101,8 +101,7 @@ pub fn read(conn: &Arc<Mutex<RefCell<serial::SystemPort>>>) -> ServiceResult<Vec
 // ex:
 //
 // let msg = String::from("Hello back");
-// let enmsg = msg.as_bytes();
-// let _wr = write(&conn, &enmsg);
+// let _wr = write(&conn, msg.ad_bytes());
 //
 pub fn write(conn: &Arc<Mutex<RefCell<serial::SystemPort>>>, msg: &[u8]) -> ServiceResult<()> {
     let conn = match conn.lock() {

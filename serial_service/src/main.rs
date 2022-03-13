@@ -1,12 +1,29 @@
-use failure::{Error, SyncFailure};
-use kubos_service::Logger;
-use log::{debug,error};
+#![deny(warnings)]
 
-fn main() -> Result<(), Error> {
-    println!("Start logging");
-    Logger::init("log-test").unwrap();
+#[macro_use]
+extern crate juniper;
 
-    debug!("this is a debug {}", "message");
-    error!("this is an error!");
-    Ok(())
+mod model;
+mod schema;
+
+use crate::model::Subsystem;
+use crate::schema::{MutationRoot, QueryRoot};
+use kubos_service::{Config, Logger, Service};
+use log::error;
+
+fn main() {
+    Logger::init("serial-service").unwrap();
+
+    Service::new(
+        Config::new("serial-service")
+            .map_err(|err| {
+                error!("Failed to load service config: {:?}", err);
+                err
+            })
+            .unwrap(),
+        Subsystem::new(),
+        QueryRoot,
+        MutationRoot,
+    )
+    .start();
 }
