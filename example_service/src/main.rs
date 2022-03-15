@@ -30,3 +30,4 @@ fn main() {
 }
 
 // cargo run --bin /home/dylan/Documents/rustprojects/kubos_projects/kubos_test_services/example_service/target/debug -- -c local_config.toml &
+// cargo run -- -c ~/DevTools/kubos/tools/local_config.toml &

@@ -5,14 +5,25 @@ extern crate juniper;
 
 mod model;
 mod schema;
+mod comms;
 
+extern crate rust_uart;
 use crate::model::Subsystem;
 use crate::schema::{MutationRoot, QueryRoot};
 use kubos_service::{Config, Logger, Service};
 use log::error;
+use std::io::Error;
+use crate::comms::*;
+use std::sync::{Arc, Mutex};
+
+type SerialServiceResult<T> = Result<T, Error>;
 
 fn main() {
     Logger::init("serial-service").unwrap();
+
+    let bus = "/dev/ttyACM0";
+
+    let conn = Arc::new(Mutex::new(SerialComms::new(&bus)));
 
     Service::new(
         Config::new("serial-service")
@@ -21,7 +32,7 @@ fn main() {
                 err
             })
             .unwrap(),
-        Subsystem::new(),
+        Subsystem::new(conn),
         QueryRoot,
         MutationRoot,
     )

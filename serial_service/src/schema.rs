@@ -1,4 +1,4 @@
-use crate::model::{Subsystem, TxSuccess};
+use crate::model::{Subsystem, TxSuccess, RxReading};
 use juniper::FieldResult;
 use kubos_service;
 use log::info;
@@ -8,9 +8,25 @@ type Context = kubos_service::Context<Subsystem>;
 // GraphQL model for Subsystem
 graphql_object!(Subsystem: Context as "Subsystem" |&self| {
     description: "Service subsystem"
+});
 
-    field uart_rx() -> FieldResult<Vec<u8>> as "Reading of subsystem uart" {
-        Ok(self.uart_rx()?)
+graphql_object!(TxSuccess: Context as "TxSuccess" |&self| {
+    description: "Set UART TX success"
+
+    field success() -> FieldResult<bool> as "Successful transmit" {
+        Ok(self.success)
+    }
+});
+
+graphql_object!(RxReading: Context as "RxSuccess" |&self| {
+    description: "Set UART RX success"
+
+    field success() -> FieldResult<bool> as "Successful recieve" {
+        Ok(self.success)
+    }
+
+    field data() -> FieldResult<String> as "Data recieved" {
+        Ok(self.data.to_string())
     }
 });
 
@@ -30,7 +46,10 @@ graphql_object!(QueryRoot : Context as "Query" |&self| {
         Ok(executor.context().subsystem())
     }
 
-    //field ping()
+    field ping() -> FieldResult<String> 
+    {
+        Ok(String::from("pong - test complete"))
+    }
 });
 
 
@@ -46,6 +65,12 @@ graphql_object!(MutationRoot : Context as "Mutation" |&self| {
         as "Transmit UART data"
     {
         Ok(executor.context().subsystem().uart_tx(data)?)
+    }
+
+    field uart_rx(&executor) -> FieldResult<RxReading> 
+        as "Recieve data through UART"
+    {
+        Ok(executor.context().subsystem().uart_rx()?)
     }
 
 });

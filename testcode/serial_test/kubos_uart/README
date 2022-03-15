@@ -1,0 +1,5 @@
+KUBOS_UART
+
+This is an example program utilizing the rust_uart crate created by KubOS. The comms.rs file should be easily reusable into services or other programs.
+The main.rs script shows the use of the comms.rs file, it prints anything received through the specified port to the console and then also sends a 
+message reading "led" to the port every 5 seconds.

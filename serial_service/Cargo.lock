@@ -1608,6 +1608,7 @@ dependencies = [
  "log 0.4.14",
  "mount",
  "rust-uart",
+ "serial",
 ]
 
 [[package]]
