@@ -1,0 +1,18 @@
+[package]
+name = "payload_service"
+version = "0.1.0"
+edition = "2021"
+
+# ip: 0.0.0.0
+# port: 8201
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+kubos-service = { path = "/home/dylan/DevTools/kubos/services/kubos-service" }
+juniper =  "0.11"
+log = "^0.4.0"
+mount = "0.3.0"
+failure = "0.1.8"
+rust-uart = { path = "/home/dylan/DevTools/kubos/hal/rust-hal/rust-uart" }
+serial = "0.4.0"

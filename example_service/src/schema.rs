@@ -23,6 +23,11 @@ graphql_object!(Subsystem: Context as "Subsystem" |&self| {
 });
 
 // GraphQL model for CalibrateThermometer return
+/*
+pub struct CalibrateThermometer {
+    pub temperature: i32,
+}
+*/
 graphql_object!(CalibrateThermometer: Context as "CalibrateThermometer" |&self| {
     description: "Calibrating thermometer return"
 
@@ -32,6 +37,11 @@ graphql_object!(CalibrateThermometer: Context as "CalibrateThermometer" |&self| 
 });
 
 // GraphQL model for ResetUptime return
+/*
+pub struct ResetUptime {
+    pub uptime: i32,
+}
+*/
 graphql_object!(ResetUptime: Context as "ResetUptime" |&self| {
     description: "Reset uptime return"
 
@@ -41,6 +51,11 @@ graphql_object!(ResetUptime: Context as "ResetUptime" |&self| {
 });
 
 // GraphQL model for SetPower return
+/*
+pub struct SetPower {
+    pub power: bool,
+}
+*/
 graphql_object!(SetPower: Context as "SetPower" |&self| {
     description: "Enable Power Return"
 
