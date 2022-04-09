@@ -19,7 +19,7 @@ pub struct SetPower {
 }
 
 pub struct CalibrateThermometer {
-    success: bool,
+    pub success: bool,
 }
 
 
@@ -42,7 +42,7 @@ impl Subsystem {
         if let Ok(locked_device) = self.device.lock() {
             match locked_device.write(data.as_bytes()) {
                 Ok(_result) => Ok(TxSuccess { success: true }),
-                Ok(_err) => Ok(TxSuccess { success: false }),
+                Err(_err) => Ok(TxSuccess { success: false }),
             }
         }
         else {
@@ -70,19 +70,16 @@ impl Subsystem {
     fn getter(&self, command: String) -> Result<String, Error>
     {
         // Send command to request data from device
-        let command = String::from("power");
         let _t: TxSuccess = match self.uart_tx(command) {
             Ok(result) => result,
             Err(err) => return Err(err),
         };
 
         // Read data from device for answer
-        let reading: RxReading = match self.uart_rx() {
-            Ok(result) => result,
-            Err(err) => return err,
+        let _reading: RxReading = match self.uart_rx() {
+            Ok(result) => return Ok(result.data),
+            Err(err) => return Err(err),
         };
-
-        Ok(result.data)
     }
 
     // power getter
@@ -90,9 +87,10 @@ impl Subsystem {
         info!("Getting power");
 
         let command = String::from("power");
-        let result = getter(command)?;
+        let result = Self::getter(&self, command)?;
 
-        if (result == "true") {
+        // arduino returns a 1 or 0 for true or false
+        if result.trim().parse::<i32>().unwrap() == 1 {
             Ok(true)
         } else {
             Ok(false)
@@ -103,7 +101,8 @@ impl Subsystem {
     pub fn set_power(&self, _power: bool) -> Result<SetPower, Error> {
         info!("Setting power state");
         // send command
-        let command = "power:" + _power.to_string();
+        // this line creates the command "power:_power" where _power is true or false
+        let command = ["power",&_power.to_string()].join(":");
         let _t: TxSuccess = match self.uart_tx(command) {
             Ok(result) => result,
             Err(err) => return Err(err),
@@ -117,9 +116,10 @@ impl Subsystem {
         info!("Getting temperature");
 
         let command = String::from("temperature");
-        let result = getter(command)?;
+        let result = Self::getter(&self, command)?;
 
-        Ok(result.data.parse::<u8>().unwrap());
+        println!("result: {}", result.trim());
+        Ok(result.trim().parse::<i32>().unwrap())
     }
 
     // temperature setter

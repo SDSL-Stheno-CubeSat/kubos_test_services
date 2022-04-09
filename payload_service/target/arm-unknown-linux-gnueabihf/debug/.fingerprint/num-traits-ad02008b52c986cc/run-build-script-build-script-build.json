@@ -1,0 +1,1 @@
+{"rustc":14330414595928666026,"features":"","target":0,"profile":0,"path":0,"deps":[[3889717946063921280,"build_script_build",false,1256831463124976266]],"local":[{"RerunIfChanged":{"output":"arm-unknown-linux-gnueabihf/debug/build/num-traits-ad02008b52c986cc/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

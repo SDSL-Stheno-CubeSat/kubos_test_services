@@ -1,0 +1,1 @@
+{"rustc":14330414595928666026,"features":"","target":0,"profile":0,"path":0,"deps":[[13910294894848252109,"build_script_build",false,11446373407997958776]],"local":[{"RerunIfChanged":{"output":"arm-unknown-linux-gnueabihf/debug/build/rand_pcg-ac2e76efb2c194ee/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

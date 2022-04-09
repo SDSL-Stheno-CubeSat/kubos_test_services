@@ -8,6 +8,8 @@ use crate::SerialServiceResult;
 use rust_uart::Connection;
 use std::time::Duration;
 
+const TIMEOUT: u64 = 250;
+
 //use failure::*;
 
 pub struct SerialComms {
@@ -35,7 +37,7 @@ impl SerialComms {
     pub fn read(&self) -> SerialServiceResult<Vec<u8>> {
         //let mut buffer = self.buffer.borrow_mut();
         let mut buffer: Vec<u8> = Vec::new();
-        while let Ok(mut buf) = self.conn.read(1, Duration::from_millis(1)) {
+        while let Ok(mut buf) = self.conn.read(1, Duration::from_millis(TIMEOUT)) {
             buffer.append(&mut buf);
             if buffer.len() > 4096 {
                 break;

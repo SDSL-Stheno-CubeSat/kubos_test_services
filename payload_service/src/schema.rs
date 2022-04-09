@@ -1,4 +1,4 @@
-use crate::model::{Subsystem, TxSuccess, RxReading, CalibrateThermometer};
+use crate::model::{Subsystem, TxSuccess, CalibrateThermometer, SetPower};
 use juniper::FieldResult;
 use kubos_service;
 use log::info;
@@ -42,7 +42,7 @@ graphql_object!(SetPower: Context as "SetPower" |&self| {
     }
 });
 
-graphql_object!(CalibrateThermometer: Context as "Calibrate Thermometer" |&self| {
+graphql_object!(CalibrateThermometer: Context as "CalibrateThermometer" |&self| {
     description: "Calibrate Thermometer Success"
 
     field success() -> FieldResult<bool> as "Calibrate Thermometer Success" {
@@ -94,7 +94,7 @@ graphql_object!(MutationRoot : Context as "Mutation" |&self| {
     field commandRaw(&executor, data : String) -> FieldResult<TxSuccess>
         as "Send raw command to subsystem"
     {
-        Ok(executor.context().subsystem().uart_tx(data))
+        Ok(executor.context().subsystem().uart_tx(data)?)
     }
 
 });

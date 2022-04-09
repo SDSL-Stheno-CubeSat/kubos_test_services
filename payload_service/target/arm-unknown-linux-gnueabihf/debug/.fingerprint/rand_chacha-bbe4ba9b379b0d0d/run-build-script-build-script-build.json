@@ -1,0 +1,1 @@
+{"rustc":14330414595928666026,"features":"","target":0,"profile":0,"path":0,"deps":[[8837224585515098675,"build_script_build",false,4749846485622686551]],"local":[{"RerunIfChanged":{"output":"arm-unknown-linux-gnueabihf/debug/build/rand_chacha-bbe4ba9b379b0d0d/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

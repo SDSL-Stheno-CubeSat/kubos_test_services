@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/dylan/Documents/stheno/kubos_test_services/payload_service/target/arm-unknown-linux-gnueabihf/debug/build/typenum-38cc36e6b32f7bb6/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/dylan/Documents/stheno/kubos_test_services/payload_service/target/arm-unknown-linux-gnueabihf/debug/build/typenum-38cc36e6b32f7bb6/out/op.rs

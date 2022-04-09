@@ -1,4 +1,5 @@
 #![deny(warnings)]
+#![allow(deprecated)]
 
 #[macro_use]
 extern crate juniper;
@@ -19,9 +20,8 @@ use std::sync::{Arc, Mutex};
 type SerialServiceResult<T> = Result<T, Error>;
 
 fn main() {
-    Logger::init("serial-service").unwrap();
 
-    let bus = "/dev/ttyACM0";
+    let bus = "/dev/ttyS1";
 
     let conn = Arc::new(Mutex::new(SerialComms::new(&bus)));
 
