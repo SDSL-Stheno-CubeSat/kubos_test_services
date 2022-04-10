@@ -1,0 +1,107 @@
+Example Service
+
+This service is for testing purposes and will simulate responses from a hardware device.
+
+
+Queries:
+-------
+
+{
+    ping
+}
+returns =>
+{
+  "data": {
+    "ping": "pong"
+  }
+}
+
+
+
+query {
+  subsystem{uptime}
+}
+return =>
+{
+  "data": {
+    "subsystem": {
+      "uptime": i32
+    }
+  }
+}
+
+
+query {
+    subsystem{power}
+}
+returns =>
+{
+  "data": {
+    "subsystem": {
+      "power": bool
+    }
+  }
+}
+
+
+query {
+    subsystem{temperature}
+}
+returns =>
+{
+  "data": {
+    "subsystem": {
+      "temperature": i32
+    }
+  }
+}
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+Mutations:
+---------
+
+mutation {
+  setPower(power:bool!) {            <- power:bool! (ex. power:true) = input
+    power                            <- power = output
+  }
+}
+returns =>
+{
+  "data": {
+    "setPower": {
+      "power": bool!
+    }
+  }
+}
+
+
+mutation {
+  resetUptime {
+    uptime
+  }
+}
+returns =>
+{
+  "data": {
+    "resetUptime": {
+      "uptime": i32!
+    }
+  }
+}
+
+
+mutation {
+  calibrateThermometer {
+    temperature
+  }
+}
+returns =>
+{
+  "data": {
+    "calibrateThermometer": {
+      "temperature": i32!
+    }
+  }
+}

@@ -16,6 +16,7 @@ pub struct CalibrateThermometer {
     pub temperature: i32,
 }
 
+
 /// Model for service's subsystem
 #[derive(Clone)]
 pub struct Subsystem;
@@ -49,7 +50,7 @@ impl Subsystem {
         } else {
             Err(Error::new(
                 ErrorKind::PermissionDenied,
-                "I'm sorry Dave, I afraid I can't do that",
+                "Cannot power off device",
             ))
         }
     }
