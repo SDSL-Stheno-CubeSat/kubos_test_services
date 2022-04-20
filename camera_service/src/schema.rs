@@ -6,6 +6,8 @@ use log::info;
 type Context = kubos_service::Context<Subsystem>;
 
 // GraphQL model for Resolution
+// Can eliminate the resolution field to be an object if x and y fields are not
+// required seperately
 
 graphql_object!(Resolution: Context as "Resolution" |&self| {
     description: "Resolution struct"
@@ -54,7 +56,7 @@ graphql_object!(Image: Context as "Image" |&self| {
 graphql_object!(Subsystem: Context as "Subsystem" |&self| {
     description: "Camera Service subsystem"
 
-    field capture() -> FieldResult<bool> as "Image capture query field" {
+    field capture() -> FieldResult<Image> as "Image capture query field" {
         Ok(self.capture()?)
     }
 
@@ -94,7 +96,7 @@ graphql_object!(MutationRoot : Context as "Mutation" |&self| {
     }
 
     // TODO: Figure why can't get resolution as a object in graphql query arguments
-    field set_resolution(&executor, x: i32, y: i32) -> FieldResult<Camera>
+    field set_resolution(&executor, x: i32, y: i32) -> FieldResult<bool>
         as "Set resolution"
     {
         Ok(executor.context().subsystem().set_resolution(x, y)?)

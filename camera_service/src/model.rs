@@ -16,7 +16,7 @@ pub struct Camera {
 impl Camera {
     fn default() -> Camera {
         Camera {
-            started: false,
+            started: true,
             resolution: Resolution::default(),
         }
     }
@@ -53,11 +53,11 @@ impl Subsystem {
 
     // Capture query method
     // TODO: Should return a byte stream where the image is stored
-    pub fn capture(&self) -> Result<bool, Error> {
+    pub fn capture(&self) -> Result<Image, Error> {
         info!("Capturing image");
         // Low level image capturing logic here(Should return an Image object with 
         // stream of bytes as a vector)
-        /*let image: Result<Image, Error> = Ok(Image {
+        let image: Result<Image, Error> = Ok(Image {
             bytes: vec![1, 1, 1, 1],
             resolution: Resolution { x: 1920, y: 1080}
         }); // example representation of an Image object
@@ -68,9 +68,7 @@ impl Subsystem {
                 ErrorKind::Other,
                 "Error occured while capturing image",
             ))
-        }*/
-
-        Ok(true)
+        }
     }
 
     // Mutation methods
@@ -110,23 +108,22 @@ impl Subsystem {
 
 
     // Method for setting camera resolution
-    pub fn set_resolution(&self, x: i32, y: i32) -> Result<Camera, Error> {
+    pub fn set_resolution(&self, x: i32, y: i32) -> Result<bool, Error> {
         info!("Setting resolution");
-        // low level logic to set resolution
-        // TODO: Might involve more checks like whether camera is on
-        let camera: Result<Camera, Error> = Ok(Camera {
-            started: true,
-            resolution: Resolution {
+        let resolution = Resolution {
                 x: x as u32,
                 y: y as u32,
-            },
-        });
-
-        match camera {
-            Ok(camera) => Ok(camera),
-            _ => Err(Error::new(
+            };
+        
+        // low level logic to set resolution
+        let is_set: bool = resolution.x == resolution.x;
+        // TODO: Might involve more checks like whether camera is on
+        if is_set {
+            Ok(true)
+        } else {
+            Err(Error::new(
                 ErrorKind::Other,
-                "Error occured setting the resolution",
+                "Error occured while setting the resolution",
             ))
         }
     }
