@@ -3,6 +3,9 @@ Example Service
 This service is for testing purposes and will simulate responses from a hardware device.
 
 ```
+code
+```
+
 Queries:
 -------
 
